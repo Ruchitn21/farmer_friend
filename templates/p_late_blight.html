@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+    <title>PREDICTION</title>
+
+    <!-- ========================================================================================================================!-->
+ 
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#ea4c89
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+
+        .ytb-vd{
+            padding-top: 50px;
+            padding-right: 100px;
+            padding-bottom: 50px;
+            padding-left: 350px;
+
+        }
+
+        .Content-h5 {
+ 
+            padding: 15px;
+            background-color: rgb(153, 156, 150);
+            color: white;
+            border-radius: 15px;
+            margin-bottom: 25px;
+        }
+
+ 
+        .border img {
+            border-radius: 15px;
+            border: 2px solid black;
+        }
+        .topnav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 40px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .vd-heading{
+            padding: 15px;
+            background-color: rgb(153, 156, 150);
+            color: white;
+            border-radius: 30px;
+            margin-bottom: 10px
+        }
+
+        .topnav a:hover {
+            background-color: #333;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+
+        .card {
+  box-shadow: 2 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  font-size: 20px;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+ 
+        @media only screen and (max-width: 325px) {
+            body {
+                font-size: x-small;
+            }
+        }
+    </style>
+</head>
+<!-- ================================================================================================================================================ -->
+ 
+<body>
+    <div class="topnav">
+        <a class="active" href="/index">Home</a>
+        <a href="technology.html">AI Tech</a>
+        <a href="www.linkedin.com/in/ruchit-nigam-a7425918a">About Me</a>
+        <a href="account">Account</a>
+        <a href="logout">Logout</a>
+    </div>
+
+    <br>
+ 
+    <div>
+        <h1 align="center">Your Results : </h1>
+    </div>
+    <br>
+    <br>
+ 
+    <div class="container my-2">
+        <div class="row mb-5">
+ 
+            <div class="col-sm" style="margin-bottom: 23px;">
+                <h3>Your Uploaded Image</h3>
+                <br>
+                <span class="border border-primary">
+                    <img src="{{ user_image }}" alt="User Image" class="img-thumbnail">
+                     
+                </span>
+                <br>
+                <br>
+                
+            </div>
+ 
+            <div class="col-sm">
+ 
+                <div>
+                    <h1 style="padding: 15px; background-color: rgb(42, 44, 125); color: white;"
+                        class="text-center mb-5 content-h1 rounded">
+                        {{pred_output}} </h1>
+                </div>
+                <div class="details">
+ 
+                    <h5>
+ 
+                        About {{pred_output}}(आलू की पछेती झूलसा)</br></br>
+    
+                    </h5>
+                    <br>
+                    <p>Late blight of potato in potato, also known as 'Irish Potato of Potato', is an important and extremely devastating disease in potato crop. It is found in all areas of the world where potato is cultivated. The birth place of this disease is considered to be North Andes of South America. From the Andes itself, the disease spread to various countries of the world including India. The disease first entered India between 1870-1880, which was probably done in India with potato seeds imported from Europe.</p>
+                    <br>
+                    <p>आलू का पछेती झुलसा रोग (late blight of potato in hindi) जिसे ‘आलू की आयरिश अंगमारी‘ के नाम से भी जाना जाता है आलू की फसल में लगने वाला एक महत्वपूर्ण एवं अत्यंत विनाशकारी रोग है। यह संसार की उन सभी क्षेत्रों में पाया जाता है जहां पर आलू की खेती की जाती है। इस रोग की जन्म स्थान दक्षिण अमेरिका के उत्तरी ऐन्डेस को माना जाता हैं। ऐन्डेस से ही यह रोग भारत सहित विश्व के विभिन्न देशों में फैला। भारत मे सर्वप्रथम यह रोग सन् 1870-1880 के बीच मे प्रवेश किया था जो सम्भवतः यूरोप से मंगाये गये आलू के बीजों के साथ भारत में किया था।</p>
+                   
+
+                </div>
+
+            </div>
+
+        </div>
+
+       
+        <hr>
+       
+</div>
+<!-- =========================================================================================================================== -->
+ 
+    <h2 align="center" class="vd-heading">Video Explaination(वीडियो स्पष्टीकरण)</h2>
+    <div class="ytb-vd">
+
+         <iframe  width="800" height="400" src="https://www.youtube.com/embed/xZG9U-x6ufw"></iframe>
+    </div>
+    <hr>
+
+    <h2 align="center" class="vd-heading">Treatment(इलाज)</h2>
+    <br>
+ 
+        <p><b>1 :</b> Apply a copper based fungicide (2 oz/ gallon of water) every 7 days or less, following heavy rain or when the amount of disease is increasing rapidly. If possible, time applications so that at least 12 hours of dry weather follows application.</p>
+        <p><b>2 : </b>Used as a foliar spray, Organocide® Plant Doctor will work its way through the entire plant to prevent fungal problems from occurring and attack existing many problems. Mix 2 tsp/ gallon of water and spray at transplant or when direct seeded crops are at 2-4 true leaf, then at 1-2 week intervals as required to control disease.</p>
+        <p><b>3 : </b>Safely treat fungal problems with SERENADE Garden. This broad spectrum bio-fungicide uses a patented strain of Bacillus subtilis and is approved for organic use. Best of all, SERENADE is completely non-toxic to honey bees and beneficial insects.</p>
+        <p><b>4 : </b>Monterey® All Natural Disease Control is a ready-to-use blend of naturally occurring ingredients that control most plant foliar diseases. All stages of the disease is controlled, but applying before infestation gives the best results.</p>
+
+    </div>
+    <br>
+    <br>
+    <hr>
+    <!-- ================================================================================================================================================================== -->
+ 
+    <section>
+ 
+        <div class="container">
+            <h1 style="padding: 15px; background-color: rgb(42, 44, 125); color: white;"
+                class="text-center my-3 content-h1">
+                Recommended Products</h1>
+        </div>
+        <br>
+ 
+        <div class="container">
+ 
+            <div class="card-columns">
+                <div class="card">
+                    <img src="static/images/p_late_blight/1.jpg" alt="Denim Jeans" style="width:70%">
+                    <br>
+                    <p>Natural Disease Control</p>
+                    <p class="price">Rs. 275</p>
+                    <p><font size=2>Ideal for organic gardening! Monterey All Natural Disease Control is a ready-to-use blend of naturally occurring ingredients that control plant foliar diseases. All stages of the disease is controlled, but applying before infestation gives the best results.</font></p>
+                    <p><button>Buy Now</button></p>
+                    </div>
+
+                 <div class="card">
+                    <img src="static/images/p_late_blight/2.jpg" alt="Denim Jeans" style="width:70%">
+                    <br>
+                    <p>Plant Doctor</p>
+                    <p class="price">Rs. 350</p>
+                    <p><font size=2>Organocide Plant Doctor is a broad-spectrum systemic fungicide that moves throughout the entire plant to prevent and treat diseases, as listed (see Product Label below). Effective against a large number of plant problems including those that cause root rot etc.</font></p>
+                    <p><button>Buy Now</button></p>
+                </div>
+
+                 <div class="card">
+                    <img src="static/images/p_early_blight/3.jpg" alt="Denim Jeans" style="width:70%">
+                    <br>
+                    <p>Garden Dust(Bonide)</p>
+                    <p class="price">Rs. 200</p>
+                    <p><font size=2>Bonide Garden Dust is specially formulated to control both insect pests and plant diseases. May be applied as a spray or dust on most vegetables, fruits and flowers. Colored green to blend with foliage. It can be used for several potato crop diseases</font></p>
+                    <p><button>Buy Now</button></p>
+                </div>
+             
+ 
+            </div>
+        </section>
+        <br>
+        <br>
+ 
+                                
+
+    <!-- ============================================================================================================================================== -->
+
+    <!-- </section> -->
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+    intent="WELCOME"
+    chat-title="farmer_friend"
+    agent-id="8b287541-d5ab-4fa5-9555-317b4b830106"
+    language-code="en"></df-messenger>
+
+<!-- ================================================================================================================================================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">Farmer-Friend is an easy to use website which is specially designed for our hardworking farmers 
+            to bring them close to Artifical Intelligence Technology and to make their work much more easier and make their yield much more
+        safe and healthy. We have been working with full dedication to help out as many farmers as possible across the Country.</p>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Categories of Crop Diseases</h6>
+            <ul class="footer-links">
+              <li><a href="http://scanfcode.com/category/c-language/">Potato Early Blight</a></li>
+              <li><a href="http://scanfcode.com/category/front-end-development/">Potato Late Blight</a></li>
+              <li><a href="http://scanfcode.com/category/back-end-development/">Potato Healthy</a></li>
+              <li><a href="http://scanfcode.com/category/java-programming-language/">Tomato Late Blight</a></li>
+              <li><a href="http://scanfcode.com/category/android/">Tomato Bacterial Spot</a></li>
+              <li><a href="http://scanfcode.com/category/templates/">Tomato Termite</a></li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="http://scanfcode.com/about/">About Us</a></li>
+              <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+              <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+              <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+              <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by 
+         <a href="#">Ruchit Nigam</a>.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a class="linkedin" href="www.linkedin.com/in/ruchit-nigam-a7425918a"><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
+    
+  
+</body>
+ 
+</html>
